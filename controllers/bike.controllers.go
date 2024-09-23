@@ -14,7 +14,7 @@ func CreateBike(ctx *gin.Context) {
 	payload := models.ReqBike{}
 
 	if err := ctx.ShouldBind(&payload); err != nil {
-		fmt.Println("Bad Request", err)
+		fmt.Println("Bad Request error", err)
 		res.Code = http.StatusBadRequest
 		res.Message = "Bad Request"
 
